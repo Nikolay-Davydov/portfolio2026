@@ -87,6 +87,40 @@ section[id] {
   flex-direction: column;
 }
 
+/* Подзаголовки секций */
+.subTitle {
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--royal);
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+/* Ссылки в Contact */
+.contactLink {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+  gap: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--royal);
+  text-decoration: none;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.contactLink:hover {
+  border-color: var(--royal-mid);
+  color: var(--royal-mid);
+}
+
 @media (max-width: 768px) {
   .twoCol {
     grid-template-columns: 1fr;

@@ -33,6 +33,7 @@ const profile = {
     email: "davidovns70@gmail.com",
     github: "https://github.com/Nikolay-Davydov",
     linkedin: "https://www.linkedin.com/in/nikolai-davydov87",
+    telegram: "https://t.me/Nikolay_Davydov",
     resume : "/resume.pdf"
   },
 };

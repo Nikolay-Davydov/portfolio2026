@@ -1,12 +1,24 @@
+"use client";
+import { useState } from "react";
 import profile from "../data/profile";
 import styles from "./page.module.css";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import { techIcons } from "../data/techIcons";
+import { FaLinkedin, FaGithub, FaTelegram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   const [first, ...rest] = profile.name.split(" ");
   const last = rest.join(" ");
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(profile.links.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <>
@@ -25,11 +37,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="container mx-auto px-6 py-12 md:px-16 md:py-16">
+      <section
+        id="about"
+        className="container mx-auto px-6 py-12 md:px-16 md:py-16"
+      >
         <h2 className="sectionTitle">About</h2>
 
-        <div className="twoColAbout"
-        >
+        <div className="twoColAbout">
           {/* Левая колонка — текст */}
           <div
             style={{
@@ -73,7 +87,7 @@ export default function Home() {
           </div>
 
           {/* Правая колонка — скилы */}
-          <div>
+          <div style={{ padding: "0 12px" }}>
             <p
               style={{
                 fontFamily: "Courier New, monospace",
@@ -92,7 +106,7 @@ export default function Home() {
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "12px",
-                padding: "0 24px",
+                // padding: "0 24px",
               }}
             >
               {profile.skills.map((skill) => {
@@ -143,24 +157,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="container mx-auto px-6 py-12 md:px-16 md:py-16">
+      <section
+        id="contact"
+        className="container mx-auto px-6 py-12 md:px-16 md:py-16"
+      >
         <h2 className="sectionTitle">Contact</h2>
 
         <div className="twoCol">
           {/* Левая — Education */}
           <div>
-            <p
-              style={{
-                fontFamily: "Courier New, monospace",
-                fontSize: "10px",
-                letterSpacing: "0.26em",
-                textTransform: "uppercase",
-                color: "var(--royal)",
-                marginBottom: "24px",
-              }}
-            >
-              Education
-            </p>
+            <p className="subTitle">Education</p>
             {profile.education.map((edu) => (
               <div
                 key={edu.institution}
@@ -199,37 +205,23 @@ export default function Home() {
             style={{ display: "flex", flexDirection: "column", gap: "32px" }}
           >
             <div>
-              <p
-                style={{
-                  fontFamily: "Courier New, monospace",
-                  fontSize: "10px",
-                  letterSpacing: "0.26em",
-                  textTransform: "uppercase",
-                  color: "var(--royal)",
-                  marginBottom: "24px",
-                }}
-              >
-                Get in touch
-              </p>
+              <p className="subTitle">Get in touch</p>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "16px",
+                  gap: "12px",
                 }}
               >
-                {profile.links.email && (
+                {profile.links.linkedin && (
                   <a
-                    href={`mailto:${profile.links.email}`}
-                    style={{
-                      fontFamily: "Courier New, monospace",
-                      fontSize: "12px",
-                      letterSpacing: "0.08em",
-                      color: "var(--royal)",
-                      textDecoration: "none",
-                    }}
+                    href={profile.links.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contactLink"
                   >
-                    📧 {profile.links.email}
+                    <FaLinkedin size={18} color="#0A66C2" />
+                    LinkedIn
                   </a>
                 )}
                 {profile.links.github && (
@@ -237,32 +229,36 @@ export default function Home() {
                     href={profile.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      fontFamily: "Courier New, monospace",
-                      fontSize: "12px",
-                      letterSpacing: "0.08em",
-                      color: "var(--royal)",
-                      textDecoration: "none",
-                    }}
+                    className="contactLink"
                   >
-                    🐙 GitHub
+                    <FaGithub size={18} color="var(--royal)" />
+                    GitHub
                   </a>
                 )}
-                {profile.links.linkedin && (
+                {profile.links.telegram && (
                   <a
-                    href={profile.links.linkedin}
+                    href={profile.links.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="contactLink"
+                  >
+                    <FaTelegram size={18} color="#26A5E4" />
+                    Telegram
+                  </a>
+                )}
+                {profile.links.email && (
+                  <button
+                    onClick={handleCopyEmail}
+                    className="contactLink"
                     style={{
-                      fontFamily: "Courier New, monospace",
-                      fontSize: "12px",
-                      letterSpacing: "0.08em",
-                      color: "var(--royal)",
-                      textDecoration: "none",
+                      cursor: "pointer",
+                      border: "1px solid var(--border)",
+                      background: "var(--surface)",
                     }}
                   >
-                    💼 LinkedIn
-                  </a>
+                    <MdEmail size={18} color="var(--royal)" />
+                    {copied ? "Copied! ✓" : profile.links.email}
+                  </button>
                 )}
               </div>
             </div>
@@ -275,18 +271,7 @@ export default function Home() {
                 background: "var(--surface)",
               }}
             >
-              <p
-                style={{
-                  fontFamily: "Courier New, monospace",
-                  fontSize: "10px",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                  marginBottom: "12px",
-                }}
-              >
-                Download CV
-              </p>
+              <p className="subTitle">Download CV</p>
               <span
                 style={{
                   fontFamily: "Courier New, monospace",
