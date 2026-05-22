@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <span className={styles.footerCopy}>© {profile.name}</span>
       <span className={styles.footerYear}>{new Date().getFullYear()}</span>
-      <div className={styles.footerLinks}>
+      {/* <div className={styles.footerLinks}>
         {profile.links?.github && (
           <a
             href={profile.links.github}
@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
         )}
         <a href="#">Telegram</a>
-      </div>
+      </div> */}
     </footer>
   );
 }

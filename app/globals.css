@@ -51,6 +51,7 @@ section[id] {
   color: var(--royal);
   text-align: center;
   margin-bottom: 64px;
+  padding-top: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
