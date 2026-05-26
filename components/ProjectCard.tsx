@@ -6,7 +6,6 @@ import styles from "./ProjectCard.module.css";
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className={styles.card}>
-
       <div className={styles.imageWrap}>
         {project.image && (
           <Image
@@ -65,9 +64,18 @@ export default function ProjectCard({ project }: { project: Project }) {
               GitHub →
             </a>
           )}
+          {project.linkedin && (
+            <a
+              href={project.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              LinkedIn →
+            </a>
+          )}
         </div>
       </div>
-
     </article>
   );
 }

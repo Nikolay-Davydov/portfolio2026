@@ -6,6 +6,7 @@ export type Project = {
   image?: string;
   link?: string;
   github?: string;
+  linkedin?: string;
 };
 
 const projects: Project[] = [
@@ -15,7 +16,8 @@ const projects: Project[] = [
     shortDescription: "Web catalog of places and companies in Costa Rica for locals and tourists. Commercial project with web app and PWA. Worked on frontend development as part of a distributed team.",
     techStack: ["Next.js", "TypeScript", "React", "Git"],
     image: "/images/guider-pro1.png",
-    link: "https://www.linkedin.com/company/guider-pro/",
+    // link: "https://www.linkedin.com/company/guider-pro/",
+    linkedin: "https://www.linkedin.com/company/guider-pro/",
   },
   {
     slug: "adaptive-layout",
