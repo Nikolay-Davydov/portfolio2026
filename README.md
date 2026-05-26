@@ -1,21 +1,30 @@
-# Portfolio (Next.js + TypeScript)
+# Nikolay Davydov — Portfolio
 
-Scaffolded project for a personal portfolio using Next.js (App Router), TypeScript and Tailwind CSS.
+Personal portfolio website built with Next.js, TypeScript and Tailwind CSS.
 
-Run locally:
+🌐 **Live:** [your-url.vercel.app](https://your-url.vercel.app)
+
+## Tech Stack
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- react-icons
+
+## Features
+
+- Single-page scroll navigation with active section highlight
+- Responsive design with mobile burger menu
+- Project showcase with tech stack icons
+- Contact section with copy-to-clipboard email
+
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-# Portfolio
+## Deploy
 
-Scaffolded minimal Next.js (App Router) project with TypeScript + Tailwind CSS.
-
-Run locally:
-
-```bash
-npm install
-npm run dev
-```
+Deployed on [Vercel](https://vercel.com).
