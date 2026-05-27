@@ -20,6 +20,13 @@ export default function Home() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const [downloaded, setDownloaded] = useState(false);
+
+  const handleDownload = () => {
+    setDownloaded(true);
+    setTimeout(() => setDownloaded(false), 3000);
+  };
+
   return (
     <>
       <section id="home" className={styles.hero}>
@@ -262,32 +269,26 @@ export default function Home() {
                 )}
               </div>
             </div>
-
-            <div
-              style={{
-                padding: "20px",
-                border: "1px solid var(--border)",
-                borderRadius: "8px",
-                background: "var(--surface)",
-              }}
-            >
+            <div>
               <p className="subTitle">Download CV</p>
-              <span
-                style={{
-                  fontFamily: "Courier New, monospace",
-                  fontSize: "11px",
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  color: "var(--muted)",
-                  border: "1px solid var(--border)",
-                  borderRadius: "4px",
-                  padding: "8px 20px",
-                  opacity: 0.5,
-                  cursor: "not-allowed",
-                }}
-              >
-                PDF — Coming Soon
-              </span>
+              <div>
+                <a
+                  href="/CV_Nikolay-Davydov.pdf"
+                  download
+                  className="contactLink"
+                  onClick={handleDownload}
+                  style={{
+                    background: downloaded
+                      ? "rgba(34, 197, 94, 0.1)"
+                      : "var(--surface)",
+                    borderColor: downloaded ? "#1294429e" : "var(--border)",
+                    color: downloaded ? "#086b2c" : "var(--royal)",
+                    transition: "all 1s ease",
+                  }}
+                >
+                  {downloaded ? " Success! ✓" : " CV_Nikolay_Davydov"}
+                </a>
+              </div>
             </div>
           </div>
         </div>
