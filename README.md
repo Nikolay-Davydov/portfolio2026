@@ -2,7 +2,7 @@
 
 Personal portfolio website built with Next.js, TypeScript and Tailwind CSS.
 
-🌐 **Live:** [https://nikolay--davydov.vercel.app/](https://nikolay--davydov.vercel.app/) 
+🌐 **Live:** [https://nikolay-davydov.vercel.app/](https://nikolay-davydov.vercel.app/) 
 
 ## Tech Stack
 
