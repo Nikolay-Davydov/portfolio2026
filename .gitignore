@@ -5,4 +5,3 @@ dist/
 /.env
 plan-*.md
 plan-*.txt
-*.pdf
