@@ -278,11 +278,9 @@ export default function Home() {
                   className="contactLink"
                   onClick={handleDownload}
                   style={{
-                    background: downloaded
-                      ? "rgba(34, 197, 94, 0.1)"
-                      : "var(--surface)",
-                    borderColor: downloaded ? "#1294429e" : "var(--border)",
-                    color: downloaded ? "#086b2c" : "var(--royal)",
+                    background: downloaded ? "rgba(34, 197, 94, 0.1)" : undefined,
+                    borderColor: downloaded ? "#1294429e" : undefined,
+                    color: downloaded ? "#086b2c" : undefined,
                     transition: "all 1s ease",
                   }}
                 >

@@ -122,6 +122,11 @@ section[id] {
   color: var(--royal-mid);
 }
 
+button.contactLink:hover {
+  border-color: var(--royal-mid) !important;
+  color: var(--royal-mid) !important;
+}
+
 @media (max-width: 768px) {
   .twoCol {
     grid-template-columns: 1fr;
