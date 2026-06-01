@@ -178,6 +178,93 @@ export default function Home() {
 
         <div className="twoCol">
           {/* Левая — Education */}
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "32px" }}
+          >
+            <div>
+              <p className="subTitle">
+                Feel free to reach out through any channel that works for you.
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
+                }}
+              >
+                {profile.links.linkedin && (
+                  <a
+                    href={profile.links.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contactLink"
+                  >
+                    <FaLinkedin size={18} color="#0A66C2" />
+                    LinkedIn
+                  </a>
+                )}
+                {profile.links.email && (
+                  <button
+                    onClick={handleCopyEmail}
+                    className="contactLink"
+                    style={{
+                      cursor: "pointer",
+                      border: "1px solid var(--border)",
+                      background: "var(--surface)",
+                    }}
+                  >
+                    <MdEmail size={18} color="var(--royal)" />
+                    {copied ? "Copied! ✓" : profile.links.email}
+                  </button>
+                )}
+                {profile.links.telegram && (
+                  <a
+                    href={profile.links.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contactLink"
+                  >
+                    <FaTelegram size={18} color="#26A5E4" />
+                    Telegram
+                  </a>
+                )}
+                {profile.links.github && (
+                  <a
+                    href={profile.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contactLink"
+                  >
+                    <FaGithub size={18} color="var(--royal)" />
+                    GitHub
+                  </a>
+                )}
+              </div>
+            </div>
+            <div>
+              <p className="subTitle">Download CV</p>
+              <div>
+                <a
+                  href="/CV_Nikolay-Davydov.pdf"
+                  download
+                  className="contactLink"
+                  onClick={handleDownload}
+                  style={{
+                    background: downloaded
+                      ? "rgba(34, 197, 94, 0.1)"
+                      : undefined,
+                    borderColor: downloaded ? "#1294429e" : undefined,
+                    color: downloaded ? "#086b2c" : undefined,
+                    transition: "all 1s ease",
+                  }}
+                >
+                  {downloaded ? " Success! ✓" : " CV_Nikolay_Davydov"}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Правая — Contact + CV */}
           <div>
             <p className="subTitle">Education</p>
             {profile.education.map((edu) => (
@@ -211,91 +298,6 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
-
-          {/* Правая — Contact + CV */}
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "32px" }}
-          >
-            <div>
-              <p className="subTitle">Get in touch</p>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "12px",
-                }}
-              >
-                {profile.links.linkedin && (
-                  <a
-                    href={profile.links.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contactLink"
-                  >
-                    <FaLinkedin size={18} color="#0A66C2" />
-                    LinkedIn
-                  </a>
-                )}
-                {profile.links.github && (
-                  <a
-                    href={profile.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contactLink"
-                  >
-                    <FaGithub size={18} color="var(--royal)" />
-                    GitHub
-                  </a>
-                )}
-                {profile.links.telegram && (
-                  <a
-                    href={profile.links.telegram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contactLink"
-                  >
-                    <FaTelegram size={18} color="#26A5E4" />
-                    Telegram
-                  </a>
-                )}
-                {profile.links.email && (
-                  <button
-                    onClick={handleCopyEmail}
-                    className="contactLink"
-                    style={{
-                      cursor: "pointer",
-                      border: "1px solid var(--border)",
-                      background: "var(--surface)",
-                    }}
-                  >
-                    <MdEmail size={18} color="var(--royal)" />
-                    {copied ? "Copied! ✓" : profile.links.email}
-                  </button>
-                )}
-              </div>
-            </div>
-            <div>
-              <p className="subTitle">Download CV</p>
-              <div>
-                <a
-                  href="/CV_Nikolay-Davydov.pdf"
-                  download
-                  className="contactLink"
-                  onClick={handleDownload}
-                  style={{
-                    background: downloaded
-                      ? "rgba(34, 197, 94, 0.1)"
-                      : undefined,
-                    borderColor: downloaded ? "#1294429e" : undefined,
-                    color: downloaded ? "#086b2c" : undefined,
-                    transition: "all 1s ease",
-                  }}
-                >
-                  {downloaded ? " Success! ✓" : " CV_Nikolay_Davydov"}
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
