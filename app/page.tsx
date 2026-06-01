@@ -70,11 +70,15 @@ export default function Home() {
                 paddingRight: "24px",
               }}
             >
-              I&apos;m a Frontend Developer with an engineering background and a
-              passion for building clean, modern web interfaces. After years in
-              technical fields, I transitioned into web development — completing
-              a Full Stack program at Netology and contributing to real projects
-              including Guider.pro, a web catalog for Costa Rica.
+              For over 10 years, I worked as a welding engineer in shipbuilding
+              — contributing to the construction of nuclear icebreakers in
+              Russia and superyachts at the Royal shipyard in the Netherlands.
+              In 2023, I made a deliberate career change and completed a Full
+              Stack Developer course at Netology. During the program, I
+              completed an internship in data scraping with Python, then joined
+              the Guider.Pro project — a web directory for tourists and locals
+              in Costa Rica — where I handled the frontend using React and
+              TypeScript in a distributed team.
             </p>
             <p
               style={{
@@ -87,9 +91,11 @@ export default function Home() {
                 paddingRight: "24px",
               }}
             >
-              I built this portfolio to showcase my skills and experience with
-              modern frameworks. I enjoy turning ideas into functional,
-              well-structured web applications.
+              I am at the early stage of my development career — and that is
+              precisely why I approach every task with the same thoroughness I
+              built over years in engineering. I am looking for a team where I
+              can grow professionally, work on real-world challenges, and
+              deliver measurable value.
             </p>
           </div>
 
@@ -278,7 +284,9 @@ export default function Home() {
                   className="contactLink"
                   onClick={handleDownload}
                   style={{
-                    background: downloaded ? "rgba(34, 197, 94, 0.1)" : undefined,
+                    background: downloaded
+                      ? "rgba(34, 197, 94, 0.1)"
+                      : undefined,
                     borderColor: downloaded ? "#1294429e" : undefined,
                     color: downloaded ? "#086b2c" : undefined,
                     transition: "all 1s ease",
