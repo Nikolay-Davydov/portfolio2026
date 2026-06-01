@@ -42,7 +42,8 @@
 }
 
 .heroEyebrowText {
-  font-size: 10px;
+  font-size: 22px;
+  font-weight: 800;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--royal-mid);
@@ -67,7 +68,7 @@
 .heroRole {
   font-size: 13px;
   letter-spacing: 0.05em;
-  color: var(--muted);
+  color: var(--black);
   line-height: 1.8;
   max-width: 420px;
 }
