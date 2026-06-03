@@ -21,7 +21,42 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className={styles.content}>
         <h3 className={styles.title}>{project.title}</h3>
         <p className={styles.description}>{project.shortDescription}</p>
-
+        {project.bullets && (
+          <ul
+            style={{
+              margin: "8px 0 0 0",
+              padding: "0",
+              listStyle: "none",
+              display: "flex",
+              flexDirection: "column",
+              gap: "6px",
+            }}
+          >
+            {project.bullets.map((bullet, i) => (
+              <li
+                key={i}
+                style={{
+                  fontSize: "13px",
+                  color: "var(--muted)",
+                  lineHeight: "1.7",
+                  paddingLeft: "16px",
+                  position: "relative",
+                }}
+              >
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    color: "var(--royal-mid)",
+                  }}
+                >
+                  •
+                </span>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        )}
         {/* Стек технологий с иконками */}
         <div className={styles.techStack}>
           {project.techStack.map((tech) => {

@@ -50,7 +50,7 @@ section[id] {
   text-transform: uppercase;
   color: var(--royal);
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
   padding-top: 48px;
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@ section[id] {
   grid-template-columns: 2fr 1fr;
   gap: 64px;
   align-items: center;
-  max-width: 960px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
