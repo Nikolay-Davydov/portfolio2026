@@ -4,6 +4,7 @@ import profile from "../data/profile";
 import styles from "./page.module.css";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import AtomAnimation from "../components/AtomAnimation";
 import { techIcons } from "../data/techIcons";
 import { FaLinkedin, FaGithub, FaTelegram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -41,6 +42,9 @@ export default function Home() {
             <span className={styles.heroNameItalic}>{last}</span>
           </h1>
           <p className={styles.heroRole}>{profile.summary}</p>
+        </div>
+        <div className={styles.heroRight}>
+          <AtomAnimation />
         </div>
       </section>
 
