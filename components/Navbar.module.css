@@ -48,7 +48,7 @@
   font-family: "Courier New", monospace;
   display: inline-block;
   padding: 4px 10px;
-  border-radius: 13px;
+  /* border-radius: 13px; */
 }
 
 .link:hover {
@@ -58,11 +58,9 @@
 
 .linkActive {
   color: var(--royal);
-  font-weight: 600;
-  background: rgba(26, 43, 109, 0.08);
-  border-radius: 13px;
+  font-weight: 700;
   border-bottom: 2px solid var(--royal);
-  padding-bottom: 1px;
+  padding-bottom: 4px;
 }
 
 .navRight {
@@ -195,12 +193,8 @@
 
     /* Активный пункт в мобильном меню */
   .mobileLink.linkActive {
-    background: rgba(26, 43, 109, 0.08);
-    border-radius: 6px;
-    margin: 0 13px;
-    padding: 10px 12px;
-    border-bottom: none;
-    color: var(--royal);
-    font-weight: 700;
+  color: var(--royal);
+  font-weight: 700;
+  border-bottom: 2px solid var(--royal);
   }
 }
