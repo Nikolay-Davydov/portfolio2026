@@ -53,12 +53,12 @@
 
 .link:hover {
   color: var(--royal);
-  box-shadow: 0 0 0 1px rgba(35, 53, 255, 0.944);
+  /* box-shadow: 0 0 0 1px rgba(35, 53, 255, 0.944); */
 }
 
 .linkActive {
   color: var(--royal);
-  font-weight: 700;
+  font-weight: 600;
   border-bottom: 2px solid var(--royal);
   padding-bottom: 4px;
 }
@@ -197,4 +197,23 @@
   font-weight: 700;
   border-bottom: 2px solid var(--royal);
   }
+}
+
+.themeToggleDesktop {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .themeToggleDesktop {
+    display: none;
+  }
+}
+
+.themeToggleMobile {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
 }

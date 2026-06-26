@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
@@ -97,6 +98,10 @@ export default function Navbar() {
         </ul>
       </div>
 
+      <div className={styles.themeToggleDesktop}>
+        <ThemeToggle />
+      </div>
+
       {/* Кнопка бургер — только на мобильном */}
       <button
         className={styles.burger}
@@ -117,6 +122,9 @@ export default function Navbar() {
       {/* Мобильное меню */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
+          <div className={styles.themeToggleMobile}>
+            <ThemeToggle />
+          </div>
           <ul className={styles.mobileLinks}>
             {navItems.map((item) => (
               <li key={item.href}>

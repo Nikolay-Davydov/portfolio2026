@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 :root {
+  /* Dark theme — основная (default) */
+  --bg: #0d1515;
+  --surface: #151d1e;
+  --border: rgba(0, 242, 255, 0.15);
+  --text: #dce4e4;
+  --muted: #849495;
+  --royal: #00f2ff;
+  --royal-mid: #00d1b2;
+}
+
+:root[data-theme="light"] {
+  /* Light theme — переопределяет переменные выше */
   --bg: #f5f0e8;
   --surface: #ede8de;
   --border: rgba(26, 43, 109, 0.12);

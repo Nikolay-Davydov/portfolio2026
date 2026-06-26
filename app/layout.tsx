@@ -1,5 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
+import { ThemeProvider } from "next-themes";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { buildMetadata } from "../lib/seo";
@@ -16,9 +17,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
