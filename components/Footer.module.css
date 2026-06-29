@@ -12,13 +12,14 @@
   font-size: 11px;
   color: var(--muted);
   letter-spacing: 0.06em;
+  font-family: var(--font-body);
 }
 
 .footerYear {
   font-size: 13px;
   color: var(--royal);
   letter-spacing: 0.1em;
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-style: italic;
 }
 

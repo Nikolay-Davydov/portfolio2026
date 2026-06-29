@@ -8,13 +8,15 @@
   padding: 0 64px;
   height: 68px;
   border-bottom: 1px solid var(--border);
-  background: var(--bg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navLogo {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--royal);
   text-decoration: none;
@@ -45,7 +47,7 @@
   transition:
     color 0.2s,
     box-shadow 0.12s;
-  font-family: "Courier New", monospace;
+  font-family: var(--font-body);
   display: inline-block;
   padding: 4px 10px;
   /* border-radius: 13px; */
@@ -139,13 +141,15 @@
   top: 80px;
   right: 24px;
   left: auto;
-  background: var(--bg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 8px 0;
   z-index: 100;
   min-width: 160px;
-  box-shadow: 0 8px 24px rgba(26, 43, 109, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .mobileLinks {
@@ -157,7 +161,7 @@
 }
 
 .mobileLink {
-  font-family: "Courier New", monospace;
+  font-family: var(--font-body);
   font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;

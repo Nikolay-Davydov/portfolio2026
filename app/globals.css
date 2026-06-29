@@ -6,11 +6,14 @@
   /* Dark theme — основная (default) */
   --bg: #0d1515;
   --surface: #151d1e;
-  --border: rgba(0, 242, 255, 0.15);
+  --border: rgba(0, 242, 255, 0.25);
   --text: #dce4e4;
   --muted: #849495;
   --royal: #00f2ff;
   --royal-mid: #00d1b2;
+  --font-heading: var(--font-heading), Georgia, serif;
+  --font-body: var(--font-body), "Courier New", monospace;
+  --glass-bg: rgba(17, 17, 20, 0.6);
 }
 
 :root[data-theme="light"] {
@@ -22,6 +25,7 @@
   --muted: #7a7a9a;
   --royal: #1a2b6d;
   --royal-mid: #2d45a0;
+  --glass-bg: rgba(225, 225, 225, 0.5);
 }
 
 html {
@@ -155,4 +159,18 @@ button.contactLink:hover {
   .projectsList {
     padding: 0 8px;
   }
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;  
+}
+
+.glass-panel:hover {
+  border-color: var(--royal-mid);
+  box-shadow: 0 8px 32px rgba(0, 242, 255, 0.08);
 }
