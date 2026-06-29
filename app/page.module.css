@@ -10,22 +10,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    circle,
-    rgba(26, 43, 109, 0.11) 1px,
-    transparent 1px
-  );
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
   background-size: 36px 36px;
-  -webkit-mask-image: radial-gradient(
-    ellipse 70% 80% at 20% 50%,
-    black 10%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(
-    ellipse 70% 80% at 20% 50%,
-    black 10%,
-    transparent 100%
-  );
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, black 10%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, black 10%, transparent 100%);
   pointer-events: none;
 }
 
@@ -50,7 +38,7 @@
 }
 
 .heroName {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-size: 86px;
   font-weight: 400;
   line-height: 0.92;
