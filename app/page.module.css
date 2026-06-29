@@ -10,7 +10,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px);
   background-size: 36px 36px;
   -webkit-mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, black 10%, transparent 100%);
   mask-image: radial-gradient(ellipse 70% 80% at 20% 50%, black 10%, transparent 100%);
@@ -85,6 +85,8 @@
   align-items: center;
   justify-content: center;
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

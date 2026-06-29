@@ -14,7 +14,7 @@
   --font-heading: var(--font-heading), Georgia, serif;
   --font-body: var(--font-body), "Courier New", monospace;
   --glass-bg: rgba(17, 17, 20, 0.6);
-  --dot: rgba(0, 242, 255, 0.1);
+  --dot: rgba(0, 242, 255, 0.25);
 }
 
 :root[data-theme="light"] {
@@ -27,7 +27,7 @@
   --royal: #1a2b6d;
   --royal-mid: #2d45a0;
   --glass-bg: rgba(225, 225, 225, 0.5);
-  --dot: rgba(26, 43, 109, 0.11);
+  --dot: rgba(26, 43, 109, 0.22);
 }
 
 html {
