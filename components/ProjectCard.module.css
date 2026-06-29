@@ -3,19 +3,20 @@
   gap: 48px;
   padding: 40px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 24px;
   margin-left: 24px;
   margin-right: 24px;
-  background: var(--bg);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
   transform: scale(1.01);
-  box-shadow: 0 8px 32px rgba(26, 43, 109, 0.1);
-  border-color: blue;
-  border-radius: 15px;
+  border-color: var(--royal-mid);
+  box-shadow: 0 8px 32px rgba(0, 242, 255, 0.08);
 }
 
 .imageWrap {
@@ -43,7 +44,7 @@
 }
 
 .title {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-size: 24px;
   font-weight: 400;
   color: var(--royal);
@@ -52,6 +53,7 @@
 }
 
 .description {
+  font-family: var(--font-body);
   font-size: 13px;
   color: var(--muted);
   line-height: 1.8;
@@ -67,7 +69,7 @@
 }
 
 .tech {
-  font-family: "Courier New", monospace;
+  font-family: var(--font-body);
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -85,7 +87,7 @@
 }
 
 .link {
-  font-family: "Courier New", monospace;
+  font-family: var(--font-body);
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
