@@ -56,22 +56,15 @@ export default function Home() {
 
         <div className="twoColAbout">
           {/* Левая колонка — текст */}
-          <div
-            style={{
-              borderLeft: "2px solid var(--royal-mid)",
-              paddingLeft: "32px",
-            }}
-          >
+          <div className="glass-panel" style={{ padding: "32px" }}>
             <p
               style={{
-                fontFamily: "Georgia, serif",
-                fontStyle: "italic",
+                fontFamily: "var(--font-body)",
                 fontSize: "15px",
                 color: "var(--text)",
-                lineHeight: "2",
-                letterSpacing: "0.02em",
+                lineHeight: "1.9",
+                letterSpacing: "0.01em",
                 marginBottom: "20px",
-                paddingRight: "24px",
               }}
             >
               For over 10 years, I worked as a welding engineer in shipbuilding
@@ -86,13 +79,11 @@ export default function Home() {
             </p>
             <p
               style={{
-                fontFamily: "Georgia, serif",
-                fontStyle: "italic",
+                fontFamily: "var(--font-body)",
                 fontSize: "15px",
                 color: "var(--muted)",
-                lineHeight: "2",
-                letterSpacing: "0.02em",
-                paddingRight: "24px",
+                lineHeight: "1.9",
+                letterSpacing: "0.01em",
               }}
             >
               I am at the early stage of my development career — and that is
@@ -104,15 +95,15 @@ export default function Home() {
           </div>
 
           {/* Правая колонка — скилы */}
-          <div style={{ padding: "0 12px" }}>
+          <div className="glass-panel" style={{ padding: "24px" }}>
             <p
               style={{
-                fontFamily: "Courier New, monospace",
+                fontFamily: "var(--font-body)",
                 fontSize: "10px",
                 letterSpacing: "0.26em",
                 textTransform: "uppercase",
                 color: "var(--royal)",
-                marginBottom: "24px",
+                marginBottom: "20px",
                 textAlign: "center",
               }}
             >
@@ -123,7 +114,6 @@ export default function Home() {
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
                 gap: "12px",
-                // padding: "0 24px",
               }}
             >
               {profile.skills.map((skill) => {
@@ -151,7 +141,7 @@ export default function Home() {
                         color: "var(--muted)",
                         letterSpacing: "0.1em",
                         textTransform: "uppercase",
-                        fontFamily: "Courier New, monospace",
+                        fontFamily: "var(--font-body)",
                         textAlign: "center",
                       }}
                     >
