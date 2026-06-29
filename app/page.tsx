@@ -272,7 +272,7 @@ export default function Home() {
               >
                 <p
                   style={{
-                    fontFamily: "Georgia, serif",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "16px",
                     color: "var(--royal)",
                     marginBottom: "4px",
@@ -282,7 +282,7 @@ export default function Home() {
                 </p>
                 <p
                   style={{
-                    fontFamily: "Courier New, monospace",
+                    fontFamily: "var(--font-body)",
                     fontSize: "10px",
                     letterSpacing: "0.12em",
                     color: "var(--royal-mid)",

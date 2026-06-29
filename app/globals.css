@@ -100,7 +100,7 @@ section[id] {
 
 /* Подзаголовки секций */
 .subTitle {
-  font-family: "Courier New", monospace;
+  font-family: var(--font-heading);
   font-size: 12px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -115,7 +115,7 @@ section[id] {
   align-items: center;
   margin: 0 24px;
   gap: 12px;
-  font-family: "Courier New", monospace;
+  font-family: var(--font-body);
   font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--royal);
@@ -123,15 +123,19 @@ section[id] {
   padding: 12px 16px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--surface);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition:
     border-color 0.2s,
-    color 0.2s;
+    color 0.2s,
+    box-shadow 0.2s;
 }
 
 .contactLink:hover {
   border-color: var(--royal-mid);
   color: var(--royal-mid);
+  box-shadow: 0 8px 24px rgba(0, 242, 255, 0.08);
 }
 
 button.contactLink:hover {
@@ -161,7 +165,9 @@ button.contactLink:hover {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 12px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;  
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .glass-panel:hover {
