@@ -5,7 +5,9 @@ import { buildMetadata } from "../lib/seo";
 import { Space_Grotesk, Geist } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ThemeBackground from "../components/ThemeBackground";
 import profile from "../data/profile";
+
 
 const heading = Space_Grotesk({
   subsets: ["latin"],
@@ -30,7 +32,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className={`${heading.variable} ${body.variable}`}>
-        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
+        <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>          
+          <ThemeBackground />
           <Navbar />
           <main>{children}</main>
           <Footer />
