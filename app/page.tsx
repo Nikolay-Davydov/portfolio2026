@@ -31,7 +31,10 @@ export default function Home() {
   return (
     <>
       <section id="home" className={styles.hero}>
-        <div className={styles.heroLeft}>
+        <div
+          className={`${styles.heroLeft} glass-panel`}
+          style={{ padding: "40px" }}
+        >
           <div className={styles.heroEyebrow}>
             <div className={styles.heroEyebrowLine} />
             <span className={styles.heroEyebrowText}>{profile.role}</span>
@@ -173,7 +176,13 @@ export default function Home() {
         <div className="twoCol">
           {/* Левая — Education */}
           <div
-            style={{ display: "flex", flexDirection: "column", gap: "32px" }}
+            className="glass-panel"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "32px",
+              padding: "32px",
+            }}
           >
             <div>
               <p className="subTitle">
@@ -259,7 +268,7 @@ export default function Home() {
           </div>
 
           {/* Правая — Contact + CV */}
-          <div>
+          <div className="glass-panel" style={{ padding: "32px" }}>
             <p className="subTitle">Education</p>
             {profile.education.map((edu) => (
               <div

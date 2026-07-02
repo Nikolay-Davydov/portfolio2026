@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import DarkBackground from "./DarkBackground";
+import LightBackground from "./LightBackground";
 
 export default function ThemeBackground() {
   const { resolvedTheme } = useTheme();
@@ -21,6 +22,5 @@ export default function ThemeBackground() {
     return <DarkBackground />;
   }
 
-  // Светлая тема: пока без фона-шейдера, это S5–S7 по плану
-  return null;
+  return <LightBackground />;
 }
