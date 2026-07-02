@@ -13,7 +13,7 @@ export default function LightBackground() {
     if (!gl) return;
 
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     ).matches;
 
     const vs = `
@@ -67,8 +67,8 @@ export default function LightBackground() {
           vec2 normMouse = u_mouse / u_resolution;
 
           vec3 bgColor = vec3(0.9608, 0.9412, 0.9098);
-          vec3 inkColor1 = vec3(0.102, 0.1686, 0.4275);
-          vec3 inkColor2 = vec3(0.1765, 0.2706, 0.6275);
+          vec3 inkColor1 = vec3(0.6588, 0.5137, 0.4157);
+          vec3 inkColor2 = vec3(0.7412, 0.6039, 0.5137);
 
           float t = u_time * 0.05;
           float n1 = snoise(uv * 2.0 + vec2(t, t * 0.5));
@@ -83,7 +83,7 @@ export default function LightBackground() {
           /* было: vec2(normMouse.x, 1.0 - normMouse.y) — второй переворот убран,
              normMouse.y уже перевёрнут один раз в JS ниже */
           float dist = distance(uv, normMouse);
-          float glow = smoothstep(0.4, 0.0, dist) * 0.1;
+          float glow = smoothstep(0.4, 0.0, dist) * 0.25;
 
           float alpha = smoothstep(-0.5, 0.5, noise) * 0.35;
           vec3 driftColor = mix(inkColor1, inkColor2, noise * 0.5 + 0.5);
@@ -118,7 +118,7 @@ export default function LightBackground() {
     gl.bufferData(
       gl.ARRAY_BUFFER,
       new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]),
-      gl.STATIC_DRAW
+      gl.STATIC_DRAW,
     );
     const posLoc = gl.getAttribLocation(program, "a_position");
     gl.enableVertexAttribArray(posLoc);

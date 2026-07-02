@@ -31,9 +31,7 @@ export default function Home() {
   return (
     <>
       <section id="home" className={styles.hero}>
-        <div
-          className={`${styles.heroLeft} glass-panel`}
-          style={{ padding: "40px" }}
+        <div className={styles.heroLeft}
         >
           <div className={styles.heroEyebrow}>
             <div className={styles.heroEyebrowLine} />
