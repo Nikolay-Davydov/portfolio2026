@@ -3,10 +3,12 @@ import { ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
 import { buildMetadata } from "../lib/seo";
 import { Space_Grotesk, Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ThemeBackground from "../components/ThemeBackground";
 import profile from "../data/profile";
+
 
 
 const heading = Space_Grotesk({
@@ -35,6 +37,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
