@@ -24,8 +24,6 @@ const body = Geist({
 export const metadata = buildMetadata({
   title: `${profile.name} — Portfolio`,
   description: profile.summary,
-  url: "https://github.com/Nikolay-Davydov/Portfolio2026",
-  image: "/images/placeholder-1.svg",
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {

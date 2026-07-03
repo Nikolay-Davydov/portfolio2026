@@ -72,7 +72,7 @@ export default function Navbar() {
             y="33"
             dominantBaseline="middle"
             textAnchor="middle"
-            fontFamily="Georgia, serif"
+            fontFamily="var(--font-heading)"
             fontSize="14"
             fontWeight="bold"
             fill="var(--royal)"

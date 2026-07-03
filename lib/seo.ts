@@ -2,21 +2,21 @@ type MetadataInput = {
   title?: string;
   description?: string;
   url?: string;
-  image?: string;
   keywords?: string[];
 };
+
+const SITE_URL = "https://nikolay-davydov.vercel.app";
 
 export function buildMetadata({
   title = "Portfolio",
   description = "Portfolio built with Next.js and TypeScript",
   url,
-  image,
   keywords,
 }: MetadataInput = {}) {
-  const siteUrl = url ?? "https://github.com/Nikolay-Davydov/Portfolio2026";
-  const imageUrl = image ?? "/images/placeholder-1.svg";
+  const siteUrl = url ?? SITE_URL;
 
   return {
+    metadataBase: new URL(SITE_URL),
     title,
     description,
     keywords,
@@ -25,15 +25,7 @@ export function buildMetadata({
       title,
       description,
       url: siteUrl,
-      siteName: `${title}`,
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      siteName: title,
       locale: "en_US",
       type: "website",
     },
@@ -41,7 +33,6 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [imageUrl],
     },
   };
 }

@@ -117,7 +117,7 @@ export default function AtomAnimation() {
           y="153"
           dominantBaseline="middle"
           textAnchor="middle"
-          fontFamily="Georgia, serif"
+          fontFamily="var(--font-heading)"
           fontSize="14"
           fontWeight="700"
           fill="white"
