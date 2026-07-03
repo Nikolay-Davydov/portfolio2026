@@ -32,29 +32,16 @@ export default function ProjectCard({ project }: { project: Project }) {
               gap: "6px",
             }}
           >
-            {project.bullets.map((bullet, i) => (
-              <li
-                key={i}
-                style={{
-                  fontSize: "13px",
-                  color: "var(--muted)",
-                  lineHeight: "1.7",
-                  paddingLeft: "16px",
-                  position: "relative",
-                }}
-              >
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    color: "var(--royal-mid)",
-                  }}
-                >
-                  •
-                </span>
-                {bullet}
-              </li>
-            ))}
+            {project.bullets && (
+              <ul className={styles.bulletList}>
+                {project.bullets.map((bullet, i) => (
+                  <li key={i} className={styles.bulletItem}>
+                    <span className={styles.bulletMarker}>•</span>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
           </ul>
         )}
         {/* Стек технологий с иконками */}

@@ -54,12 +54,35 @@
 
 .description {
   font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 18px;
+  color: var(--text);
   line-height: 1.8;
   letter-spacing: 0.03em;
   /* max-width: 520px; */
   margin: 0;
+}
+
+.bulletList {
+  margin: 8px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bulletItem {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.7;
+  padding-left: 16px;
+  position: relative;
+}
+
+.bulletMarker {
+  position: absolute;
+  left: 0;
+  color: var(--royal-mid);
 }
 
 .techStack {
